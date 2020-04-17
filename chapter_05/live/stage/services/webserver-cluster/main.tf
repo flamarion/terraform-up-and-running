@@ -10,6 +10,10 @@ module "webserver_cluster" {
   instance_type          = "t2.micro"
   min_size               = 2
   max_size               = 2
+  custom_tags = {
+    Owner      = "team-bar"
+    DeployedBy = "terraform"
+  }
 }
 
 resource "aws_security_group_rule" "allow_testing_inbound" {
