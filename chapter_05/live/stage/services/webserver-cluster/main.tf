@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "webserver_cluster" {
-  source                 = "github.com/flamarion/terraform-up-and-running//chapter_04/modules/services/webserver-cluster?ref=v0.0.2"
+  source                 = "github.com/flamarion/terraform-up-and-running//chapter_04/modules/services/webserver-cluster?ref=chapter_05"
   cluster_name           = "webservers-stage"
   db_remote_state_bucket = "flamarion-hashicorp"
   db_remote_state_key    = "stage/data-stores/mysql/terraform.tfstate"
