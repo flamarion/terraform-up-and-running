@@ -11,10 +11,7 @@ provider "aws" {
 }
 
 module "hello_world_app" {
-  # TODO: replace this with your own module URL and version!!
-  #source = "git@github.com:foo/modules.git//services/hello-world-app?ref=v0.0.5"
-  source                 = "github.com/flamarion/terraform-up-and-running//chapter_06/modules/services/hello-world-app?ref=v0.0.5"
-
+  source                 = "github.com/flamarion/terraform-up-and-running//chapter_06/modules/services/hello-world-app?ref=v0.0.6"
   server_text = "New server text"
   environment = "stage"
   # db_remote_state_bucket = "flamarion-hashicorp"
